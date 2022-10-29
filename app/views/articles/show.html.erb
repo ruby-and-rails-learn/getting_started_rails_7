@@ -1,2 +1,11 @@
 <h1>Articles#show</h1>
+<h3> article title: <%= @article.title %></h3>
+<h3> Body </h3>
+<div>
+  <%= @article.body %>
+</div>
+<li><%= link_to "Destroy", article_path(@article), data: {
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %></li>
 <p>Find me in app/views/articles/show.html.erb</p>
